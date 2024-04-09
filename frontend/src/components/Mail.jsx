@@ -15,7 +15,7 @@ function Mail() {
  
   const sendEmails = async () => {
     try {
-      const response = await fetch("http://localhost:5000/send-emails", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/send-emails`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
