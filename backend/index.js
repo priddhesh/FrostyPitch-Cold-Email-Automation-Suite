@@ -45,6 +45,14 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+app.get('/',async(req,res)=>{
+    try {
+      res.status(200).send("Hello World!");
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+})
 app.post('/send-emails', async (req, res) => {
     const { emails, subject, message } = req.body;
     try {
