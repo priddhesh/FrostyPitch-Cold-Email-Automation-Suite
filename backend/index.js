@@ -66,11 +66,12 @@ app.post('/send-emails', async (req, res) => {
                 attachments: [],
             };
             
-            const pdfAttachment = fs.readFileSync('Resume_Riddhesh_2024.pdf');
-            mailOptions.attachments.push({
-                filename: 'Resume_Riddhesh_2024.pdf',
-                content: pdfAttachment,
-            });
+            // const pdfAttachment = fs.readFileSync('./Resume_Riddhesh_2024.pdf');
+            // mailOptions.attachments.push({
+            //     filename: 'Resume_Riddhesh_2024.pdf',
+            //     content: pdfAttachment,
+            //     contentType: 'application/pdf',
+            // });
             await transporter.sendMail(mailOptions);
            }
         }
