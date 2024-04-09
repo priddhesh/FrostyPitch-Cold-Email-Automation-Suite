@@ -66,7 +66,7 @@ app.post('/send-emails', async (req, res) => {
                 attachments: [],
             };
             
-            const pdfAttachment = fs.readFileSync('./Resume_Riddhesh_2024.pdf');
+            const pdfAttachment = fs.readFileSync('Resume_Riddhesh_2024.pdf');
             mailOptions.attachments.push({
                 filename: 'Resume_Riddhesh_2024.pdf',
                 content: pdfAttachment,
