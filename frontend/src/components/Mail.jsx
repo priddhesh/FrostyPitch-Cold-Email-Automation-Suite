@@ -10,6 +10,11 @@ function Mail() {
     const message = localStorage.getItem('message');
     if(subject!=null) setSubject(subject);
     if(message!=null) setMessage(message);
+
+    const triggerBackend = async()=>{
+       await fetch(`${process.env.REACT_APP_BACKEND_URL}`);
+    }
+    triggerBackend();
   }, [])
   
  
